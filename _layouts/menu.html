@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<header
+  class="hero hero__short"
+  {%
+  if
+  page.image-filename
+  %}
+  style="background-image:url({{ site.baseurl }}/images/{{ page.image-filename }})"
+  {%
+  endif
+  %}
+>
+  <div class="hero-headline">
+    <h1 class="">{{ page.headline }}</h1>
+  </div>
+</header>
+
+<div class="wrapper">
+  <div class="post-content {{ page.custom-classes }}">
+    {{ content }}
+  </div>
+  {% if page.additional-options %}
+  <div class="grey-well">
+    <h2>Additional Options</h2>
+    <ul>
+      {% for opt in page.additional-options %}
+      <li>{{ opt }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+</div>

@@ -1,0 +1,43 @@
+<footer class="site-footer">
+  <div class="wrapper">
+    <h2 class="footer-heading">{{ site.title }}</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>{{ site.title }}</li>
+          <li>109 E. Hydraulic St., PO Box 375</li>
+          <li>Yorkville, IL 60560</li>
+        </ul>
+        <ul class="contact-list">
+          <li>Phone: (630) 553-9533</li>
+          <li>Fax: (630) 553-1822</li>
+          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          {% if site.github_username %}
+          <li>
+            {% include icon-github.html username=site.github_username %}
+          </li>
+          {% endif %} {% if site.twitter_username %}
+          <li>
+            {% include icon-twitter.html username=site.twitter_username %}
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>
+          Delivery charges ($20 minimum) are based on mileage and complexity of
+          setup.
+        </p>
+
+        <p>All prices subject to change without notice.</p>
+      </div>
+    </div>
+  </div>
+</footer>
